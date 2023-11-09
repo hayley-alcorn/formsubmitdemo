@@ -4,18 +4,19 @@
         <title>My Portfolio</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="mobilestyle.css">
         <link rel="stylesheet" href="style.css">
     </head>
 
-    <body>
+    <body id = "body">
         <header>
-            <h1>Hayley Alcorn</h1>
+            <h1 id = "name">Hayley Alcorn</h1>
             <nav>
-                <ul>
-                    <li><a href = '#about'>About Me</a></li>
-                    <li><a href = '#projects'>Projects</a></li>
-                    <li><a href = '#skills'>Skills</a></li>
-                    <li><a href = '#contacts'>Contacts</a></li>
+                <ul>         
+                    <li class="top"><button onclick="changeColor1()" class = "colorchange"><a href="#about">About Me</a></button></li>
+                    <li class ="top"><button onclick="changeColor2()" class = "colorchange"><a href="#Projects">Projects</a></button></li>
+                    <li class ="bottom"><button button onclick="changeColor3()" class = "colorchange"><a href="#Skills">Skills</a></button></li>
+                    <li class = "bottom"><button button onclick="changeColor4()" class = "colorchange"><a href="#Contact">Contact</a></button></li>
                 </ul>
             </nav>
         </header>
@@ -23,36 +24,96 @@
         <main>
 
             <section id = 'about'>
-                <img src="images/dog.jpg" alt="Profile picture"> 
-                <div>
+                <img src="images/Me.jpg" alt="Profile picture"> 
+                <div id="About" class = "colorchange">
                     <h2>About Me</h2>
-                    <p>Hi, my name is Hayley Alcorn and I am currently a mechanical engineer in Northern Ireland. I have had an interest in programming since leaving Uni and have been looking for a way to get into a web development/software development career. I am currently taking the full stack engineer course on Codecademy to get the skills required for a job in this industry. My current role has allowed me to learn and use python to send out data every 12 hours so that it can be monitored. </p>
+                    <p id = "description">Hi, my name is Hayley Alcorn and I am currently a mechanical engineer in Northern Ireland. I have had an interest in programming since leaving Uni and have been looking for a way to get into a web development/software development career. I am currently taking the coding traineeship offered through IT career switch to get the skills required for a job in this industry.</p>
+                </div>
+                <div id="Qualifications" class = "colorchange">
+                    <h2>Qualifications</h2>
+                    <h3>Degree</h3>
+                    <p>
+                        <ul>
+                            <li class = "Education">MEng Hons Mechanical Engineering (2-1), Queen's University Belfast</li>
+                        </ul>
+                    </p>
+                    <h3>A-levels</h3>
+                    <p>
+                        <ul class = "Education">
+                            <li>Physics: A</li>
+                            <li>Maths: B</li>
+                            <li>Chemistry: B</li>
+                        </ul>
+                    </p>
                 </div>
             </section>
 
-            <h3>Projects</h3>
-            <section id ='projects'>
-                <figure>
-                    <img src="images/black.jpg" alt="Project 1" class = 'project'> 
-                    <figcaption>Project 1</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/black.jpg" alt="Project 2" class = 'project'> 
-                    <figcaption>Project 2</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/black.jpg" alt="Project 3" class = 'project'> 
-                    <figcaption>Project 3</figcaption>
-                </figure>
-            </section>
-
-            <h3>Skills</h3>
-            <section id = 'skills'>
-
+            <section id="Projects" class = "colorchange">
+                <div id="section2" class="colorchange">
+                <h2>Projects</h2>
+                <div id = "Examples">
+                    <figure>
+                        <img src="images/black.jpg" alt="Project 1" class = 'project'> 
+                        <figcaption>Project 1</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/black.jpg" alt="Project 2" class = 'project'> 
+                        <figcaption>Project 2</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/black.jpg" alt="Project 3" class = 'project'> 
+                        <figcaption>Project 3</figcaption>
+                    </figure>
+                </div>
+                </div>
             </section>
 
             
-            
+            <section id = 'Skills' class = "colorchange">
+                <h2>Skills</h2>
+                <div id="Courses">
+                <figure>
+                    <img src="images/python.png" alt="Python Logo" class ="Logo">
+                </figure>
+                <figure>
+                    <img src="images/css-3.png" alt="Python Logo" class ="Logo">
+                </figure>
+                <figure>
+                    <img src="images/javascript-logo-512.png" alt="Python Logo" class ="Logo">
+                </figure>
+                <figure>
+                    <img src="images/HTML5_logo-700x700.png" alt="Python Logo" class ="Logo">
+                </figure>
+                <figure>
+                    <img src="images/PHP_logo-700x368.png" alt="Python Logo" class ="Logo">
+                </figure>
+                <figure>
+                    <img src="images/jquery-logo-png-jquery-logo-png-transparent-amp-svg-vector-pluspng-2400x543.png" alt="Python Logo" class ="Logo">
+                </figure>
+                <figure>
+                    <img src="images/bootstrap-logo-512x512.png" alt="Python Logo" class ="Logo">
+                </figure>
+                </div>
+            </section>
+
+            <section id = "Contact" class = "colorchange">
+                <h2>Contact</h2>
+                <div class = "container">
+                    <form action="https://formsubmit.co/hayleyalcorn@gmail.com" method="POST">
+                        <h3>Get in touch</h3>
+                        <input type="text" id="Name" placeholder="Name" required>
+                        <input type="email" id="email" placeholder="Email" required>
+                        <input type="text" id="phone" placeholder="Phone number.">
+                        <textarea id = "message" rows="4" placeholder="Enter your message here."></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </section>
         </main>
+
+        <footer id = "footer">
+            Hayley Alcorn © 2023
+        </footer>
+        <script src="app.js"></script>
     </body>
 </html>
